@@ -24,9 +24,10 @@ public class OrderDao {
     public Order saveOrder(Order order) {
         try{
             entityManager.persist(order);
+            return order;
         }
         catch (NoResultException nre){
             return null;
         }
-    }
+        }
 }
